@@ -1,11 +1,9 @@
 import random
-
-with open("characters.txt", "r") as f:
-    characters = f.read().splitlines()
-
-with open("output.txt", "w") as f:
+with open("characters.txt", "r") as file:
+    characters = file.read().splitlines()
+with open("output.txt", "w") as file:
     for character in characters:
         status = random.choice(["alive", "dead"])
-        f.write(f"{character} – {status}\n")
-
+        file.write(character + " – " + status)
 print("Staatused on salvestatud faili output.txt.")
+
